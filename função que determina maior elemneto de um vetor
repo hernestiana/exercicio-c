@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+//uma função que determina   maior componente de um vetor.
+
+void maior_elemento(int v[]){
+    int maior_numero;
+    maior_numero = v[0];
+    for (int j=1; j <= 3; j++){
+        if (v[j] > maior_numero) {
+          maior_numero = v[j];
+        }
+    }
+    printf("o maior elemento é:  %d",maior_numero);
+ }
+void inserir(){
+  int vetor[4];
+  for (int i =  0; i<= 3; i++){
+        scanf("%i",&vetor[i]);
+    } 
+    maior_elemento(vetor); // 
+}
+int main(){
+    printf("Digite 4 números: ");
+    inserir();
+    return 0;
+}
