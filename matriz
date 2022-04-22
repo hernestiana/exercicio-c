@@ -1,0 +1,223 @@
+#include<stdio.h> 
+
+#define N 5 
+
+  
+
+int 
+
+main () 
+
+{ 
+
+  int matriz[N][N]; 
+
+  int contador = 1; 
+
+  //carregando valores na matriz 
+
+  for (int i = 0; i < N; i++) 
+
+    { 
+
+      for (int j = 0; j < N; j++) 
+
+{ 
+
+  matriz[i][j] = contador++; 
+
+} 
+
+    } 
+
+  
+
+  //exibir a matriz 
+
+  for (int i = 0; i < N; i++) 
+
+    { 
+
+      for (int j = 0; j < N; j++) 
+
+{ 
+
+  printf ("%d\t", matriz[i][j]); 
+
+} 
+
+      printf ("\n"); 
+
+    } 
+
+  
+
+  //imprimir a diagonal principal da matriz 
+
+  printf ("DIAGONAL PRINCIPAL:\n"); 
+
+  for (int i = 0; i < N; i++) 
+
+    { 
+
+      for (int j = 0; j < N; j++) 
+
+{ 
+
+  if (i == j) 
+
+    printf ("%d\t", matriz[i][j]); 
+
+  else 
+
+    printf ("\t"); 
+
+} 
+
+      printf ("\n"); 
+
+  
+
+    } 
+
+  //imprimir a diagonal secundaria 
+
+  printf ("DIAGONAL SECUNDARIA:\n"); 
+
+  for (int i = 0; i < N; i++) 
+
+    { 
+
+      for (int j = 0; j < N; j++) 
+
+{ 
+
+  if (i + j == N - 1) 
+
+    printf ("%d\t", matriz[i][j]); 
+
+  else 
+
+    printf ("\t"); 
+
+} 
+
+      printf ("\n"); 
+
+    } 
+
+  
+
+  //imprimir a matriz triangular inferior 
+
+  printf ("MATRIZ TRIANGULAR INFERIOR\n"); 
+
+  for (int i = 0; i < N; i++) 
+
+    { 
+
+      for (int j = 0; j < N; j++) 
+
+{ 
+
+  if (i > j) 
+
+    printf ("%d\t", matriz[i][j]); 
+
+  else 
+
+    printf ("\t"); 
+
+} 
+
+      printf ("\n"); 
+
+    } 
+
+  
+
+  //imprimir a matriz triangular superior 
+
+  printf ("MATRIZ TRIANGULAR SUPERIOR\n"); 
+
+  for (int i = 0; i < N; i++) 
+
+    { 
+
+      for (int j = 0; j < N; j++) 
+
+{ 
+
+  if (i < j) 
+
+    printf ("%d\t", matriz[i][j]); 
+
+  else 
+
+    printf ("\t"); 
+
+} 
+
+      printf ("\n"); 
+
+    } 
+
+  
+
+  //imprimir a matriz secundaria triangular inferior 
+
+  printf ("MATRIZ SECUNDARIA TRIANGULAR INFERIOR \n"); 
+
+  for (int i = 0; i < N; i++) 
+
+    { 
+
+      for (int j = 0; j < N; j++) 
+
+{ 
+
+  if (i + j > N - 1) 
+
+    printf ("%d\t", matriz[i][j]); 
+
+  else 
+
+    printf ("\t"); 
+
+} 
+
+      printf ("\n"); 
+
+    } 
+
+  
+
+  //imprimir a matriz secundaria triangular superior 
+
+  printf ("MATRIZ SECUNDARIA TRIANGULAR SUPERIOR \n"); 
+
+  for (int i = 0; i < N; i++) 
+
+    { 
+
+      for (int j = 0; j < N; j++) 
+
+{ 
+
+  if (i + j < N - 1) 
+
+    printf ("%d\t", matriz[i][j]); 
+
+  else 
+
+    printf ("\t"); 
+
+} 
+
+      printf ("\n"); 
+
+    } 
+
+  return 0; 
+
+} 
